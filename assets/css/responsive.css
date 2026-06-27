@@ -1,0 +1,138 @@
+/* Responsive Styles */
+
+/* Tablets (768px and down) */
+@media (max-width: 768px) {
+  .hero-section {
+    min-height: 400px;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .navbar-nav {
+    text-align: center;
+  }
+
+  .navbar-nav .nav-link {
+    padding: 10px 0;
+  }
+
+  .card {
+    margin-bottom: 20px;
+  }
+
+  .social-links {
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .whatsapp-button {
+    bottom: 20px;
+    right: 20px;
+  }
+
+  .whatsapp-link {
+    width: 50px;
+    height: 50px;
+    font-size: 1.2rem;
+  }
+
+  .cta-section .btn {
+    display: block;
+    margin: 10px auto;
+  }
+
+  .contact-info li {
+    flex-wrap: wrap;
+  }
+}
+
+/* Mobile (480px and down) */
+@media (max-width: 480px) {
+  body {
+    font-size: 0.95rem;
+  }
+
+  h1, .display-1 {
+    font-size: 1.75rem;
+  }
+
+  h2, .display-5 {
+    font-size: 1.5rem;
+  }
+
+  .hero-section {
+    min-height: 300px;
+  }
+
+  .navbar-brand {
+    font-size: 1.2rem;
+  }
+
+  .btn {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+
+  .btn-lg {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+
+  .card-body {
+    padding: 1rem;
+  }
+
+  .container {
+    padding: 0 10px;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none;
+  }
+
+  .row {
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  [class*='col-'] {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+
+  .section-title::after {
+    width: 40px;
+  }
+
+  .whatsapp-link {
+    width: 45px;
+    height: 45px;
+    font-size: 1rem;
+  }
+
+  .contact-info li {
+    font-size: 0.9rem;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .site-header,
+  .site-footer,
+  .whatsapp-button,
+  .btn,
+  form {
+    display: none;
+  }
+
+  .container {
+    max-width: 100%;
+  }
+
+  a {
+    text-decoration: underline;
+  }
+}
