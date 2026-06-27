@@ -1,0 +1,18 @@
+/*
+Theme Name: FlipTripsIndia
+Theme URI: https://fliptrips.india
+Author: FlipTrips India
+Author URI: https://fliptrips.india
+Description: A modern, responsive WordPress theme for travel agencies and tour operators in India. Features hero sliders, tour packages, destinations, fleet management, and booking systems.
+Version: 1.0.0
+License: GPL v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: fliptrips-india
+Domain Path: /languages
+Requires at least: 6.8
+Requires PHP: 8.2
+Tested up to: 6.8
+Tag: travel, tours, bootstrap, responsive, customizable, elementor
+*/
+
+/* This file is intentionally minimal. All styles are enqueued from assets/css/main.css */
