@@ -1,6 +1,8 @@
 <?php
 /**
- * Index template (fallback)
+ * The main template file
+ * This is the most generic template file in a WordPress theme
+ * and one of the two required files for a theme (the other being style.css).
  *
  * @package FlipTripsIndia
  * @since 1.0.0
@@ -13,61 +15,64 @@ if ( ! defined( 'ABSPATH' ) ) {
 get_header();
 ?>
 
-<div class="container py-5">
-	<div class="row">
-		<div class="col-lg-8">
-			<?php
-			if ( have_posts() ) {
-				while ( have_posts() ) {
-					the_post();
-					?>
-					<article id="post-<?php the_ID(); ?>" <?php post_class( 'mb-5 pb-4 border-bottom' ); ?>>
-						<header class="entry-header mb-3">
-							<?php the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '">', '</a></h2>' ); ?>
-							<div class="entry-meta text-muted mb-2">
-								<?php printf( esc_html__( 'Posted on %s by %s', 'fliptrips-india' ), esc_html( get_the_date() ), esc_html( get_the_author() ) ); ?>
-							</div>
-						</header>
-
-						<?php
-						if ( get_the_post_thumbnail() ) {
+<main id="main" class="site-main">
+	<div class="container py-5">
+		<div class="row">
+			<div class="col-lg-8">
+				<?php
+				if ( have_posts() ) {
+					while ( have_posts() ) {
+						the_post();
+						?>
+						<article id="post-<?php the_ID(); ?>" <?php post_class( 'mb-4' ); ?>>
+							<?php
+							if ( has_post_thumbnail() ) {
+								?>
+								<div class="mb-3">
+									<?php the_post_thumbnail( 'large', array( 'class' => 'img-fluid' ) ); ?>
+								</div>
+								<?php
+							}
 							?>
-							<div class="featured-image mb-3">
-								<?php the_post_thumbnail( 'large', array( 'class' => 'img-fluid' ) ); ?>
+							<header class="entry-header mb-3">
+								<h1 class="entry-title"><?php the_title(); ?></h1>
+								<div class="entry-meta text-muted">
+									<?php
+									echo 'Posted on ' . esc_html( get_the_date() ) . ' by ' . esc_html( get_the_author() );
+									?>
+								</div>
+							</header>
+							<div class="entry-content">
+								<?php the_content(); ?>
 							</div>
 							<?php
-						}
-						?>
-
-						<div class="entry-content">
-							<?php the_excerpt(); ?>
-							<a href="<?php echo esc_url( get_permalink() ); ?>" class="btn btn-primary"><?php esc_html_e( 'Read More', 'fliptrips-india' ); ?></a>
-						</div>
-					</article>
+							the_posts_pagination( array(
+								'before_markup' => '<div class="mt-5">',
+								'after_markup'  => '</div>',
+							) );
+							?>
+						</article>
+						<?php
+					}
+				} else {
+					?>
+					<div class="alert alert-info">
+						<?php esc_html_e( 'No posts found.', 'fliptrips-india' ); ?>
+					</div>
 					<?php
 				}
-
-				the_posts_pagination( array(
-					'mid_size'           => 2,
-					'prev_text'          => esc_html__( 'Previous', 'fliptrips-india' ),
-					'next_text'          => esc_html__( 'Next', 'fliptrips-india' ),
-					'before_page_number' => '<span class="page-numbers">',
-					'after_page_number'  => '</span>',
-				) );
-			} else {
 				?>
-				<div class="alert alert-info" role="alert">
-					<?php esc_html_e( 'No posts found. Start creating content!', 'fliptrips-india' ); ?>
-				</div>
+			</div>
+			<div class="col-lg-4">
 				<?php
-			}
-			?>
-		</div>
-		<div class="col-lg-4">
-			<?php get_sidebar(); ?>
+				if ( is_active_sidebar( 'primary-sidebar' ) ) {
+					dynamic_sidebar( 'primary-sidebar' );
+				}
+				?>
+			</div>
 		</div>
 	</div>
-</div>
+</main>
 
 <?php
 get_footer();

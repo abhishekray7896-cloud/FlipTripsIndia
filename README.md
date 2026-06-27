@@ -1,357 +1,161 @@
-# FlipTripsIndia WordPress Theme
+# FlipTrips India - WordPress Travel Theme
 
-## Overview
-
-FlipTripsIndia is a modern, production-ready WordPress theme designed specifically for travel agencies, tour operators, and cab booking services in India. Built with Bootstrap 5.3, PHP 8.2+, and WordPress 6.8+, it provides a comprehensive solution for showcasing tours, destinations, fleet management, and facilitating bookings.
+A modern, feature-rich WordPress theme designed specifically for travel and tourism businesses in India. Perfect for tour operators, travel agencies, and hospitality providers.
 
 ## Features
 
 ### Core Features
-- **Responsive Design**: Fully responsive Bootstrap 5 based layout
-- **Hero Slider**: Eye-catching homepage slider with tour highlights
-- **Destinations**: Showcase popular travel destinations with regions
-- **Tour Packages**: Display tour packages with pricing and details
-- **Fleet Management**: Showcase vehicles/cabs with specifications
-- **Cab Booking**: Integrated cab booking system
-- **Hotel Booking**: Hotel booking functionality
-- **Testimonials**: Display customer reviews and testimonials
-- **Blog**: Integrated blog with latest travel tips and stories
-- **Newsletter**: Email subscription widget
-- **WhatsApp Integration**: Floating WhatsApp button
-- **Contact Form**: Custom contact form with validation
-- **Google Maps**: Location display with maps
+- **Responsive Design**: Fully responsive and mobile-optimized
+- **Modern UI/UX**: Clean, professional design with smooth animations
+- **Multiple Post Types**: Tours, Destinations, Fleet, Testimonials
+- **Custom Taxonomies**: Tour Categories, Destination Regions
+- **Theme Customizer**: Easy-to-use customization panel
+- **Color Customization**: Customizable primary, secondary, and accent colors
+- **SEO Optimized**: Built-in SEO best practices
+
+### Content Sections
+- **Hero Slider**: Dynamic carousel of featured tours
+- **Destinations**: Grid display of travel destinations
+- **Tour Packages**: Showcase of available tour packages
+- **Fleet Showcase**: Display of available vehicles
+- **Testimonials**: Customer reviews and feedback
+- **Blog Section**: Travel tips and articles
+- **Call-to-Action**: Prominent booking and contact sections
+
+### Interactive Features
+- **WhatsApp Integration**: Floating WhatsApp button for direct communication
+- **Social Media Links**: Integration with major social platforms
+- **Contact Information**: Display business details and contact info
+- **Booking Forms**: Customizable booking functionality
+- **Filtering System**: Filter tours by category and destinations by region
 
 ### Technical Features
-- **SEO Optimized**: Clean markup, proper heading hierarchy
-- **Elementor Compatible**: Works seamlessly with Elementor page builder
-- **WooCommerce Compatible**: Ready for product integration
-- **Customizer Options**: Extensive theme customizer support
-- **One-Click Demo Import**: Import sample content
-- **Lazy Loading**: Performance optimized image loading
-- **Accessibility**: WCAG 2.1 AA compliant
-- **Security**: Sanitized inputs, escaped outputs, nonces
-
-### Custom Post Types
-- Tours
-- Destinations
-- Fleet
-- Testimonials
-- Team Members
-
-### Custom Taxonomies
-- Tour Categories
-- Destination Regions
-- Fleet Types
+- **Bootstrap 5 Integration**: Responsive grid and components
+- **Swiper.js**: Touch-friendly sliders and carousels
+- **Bootstrap Icons**: Icon library for beautiful visuals
+- **Lazy Loading**: Optimized image loading
+- **AJAX Functionality**: Smooth filtering without page reloads
+- **Mobile Menu**: Responsive navigation
+- **Smooth Scrolling**: Enhanced user experience
+- **Animations**: Intersection observer-based animations
 
 ## Installation
 
-### Requirements
-- PHP 8.2 or higher
-- WordPress 6.8 or higher
-- Bootstrap 5.3
+1. Download the theme files
+2. Upload to `/wp-content/themes/fliptrips-india/`
+3. Activate the theme from WordPress admin
+4. Go to Customize > FlipTrips Settings to configure
 
-### Steps
+## Theme Setup
 
-1. **Download/Clone the Theme**
-   ```bash
-   git clone https://github.com/yourusername/FlipTripsIndia.git
-   ```
+### Initial Configuration
 
-2. **Upload to WordPress**
-   - Extract the theme folder to `wp-content/themes/`
-   - Or upload via WordPress admin dashboard
+1. **Site Identity**
+   - Set your site title and tagline
+   - Upload a logo or site icon
+   - Write your site description
 
-3. **Activate Theme**
-   - Go to WordPress Admin > Appearance > Themes
-   - Locate "FlipTripsIndia" and click Activate
+2. **Color Settings**
+   - Customize primary color (default: #FF6B6B)
+   - Customize secondary color (default: #4ECDC4)
+   - Customize accent color (default: #FFE66D)
 
-4. **Import Demo Content** (Optional)
-   - Go to Appearance > Import Demo Data
-   - Follow the wizard to import sample tours, destinations, and more
+3. **Contact Information**
+   - Add phone number
+   - Add email address
+   - Add physical address
+   - Add WhatsApp number
 
-5. **Configure Theme Settings**
-   - Go to Appearance > Customize
-   - Configure logo, colors, contact information, and more
+4. **Social Media**
+   - Add Facebook URL
+   - Add Instagram URL
+   - Add Twitter URL
+   - Add YouTube URL
+   - Add LinkedIn URL
 
-## Theme Customizer Options
+## Creating Content
 
-### Site Identity
-- Logo (custom logo upload)
-- Site Title and Tagline
+### Adding Tours
+1. Go to Tours > Add New
+2. Fill in tour details:
+   - Title
+   - Description
+   - Featured image
+   - Category
+   - Duration
+   - Price
+3. Publish
 
-### Colors
-- Primary Color
-- Secondary Color
-- Accent Color
+### Adding Destinations
+1. Go to Destinations > Add New
+2. Fill in destination details:
+   - Title
+   - Description
+   - Featured image
+   - Region
+3. Publish
 
-### Typography
-- Heading Font
-- Body Font
-- Font Size Options
+### Adding Fleet
+1. Go to Fleet > Add New
+2. Fill in vehicle details:
+   - Title
+   - Description
+   - Featured image
+3. Publish
 
-### Contact Information
-- Phone Number
-- Email Address
-- WhatsApp Number
-- Address
-- Hours of Operation
+## Customization
 
-### Social Links
-- Facebook
-- Twitter
-- Instagram
-- LinkedIn
-- YouTube
+### Theme Customizer
+Access customization options through:
+Appearance > Customize
 
-### Footer
-- Footer Text
-- Copyright Notice
-- Footer Widgets (4 widget areas)
+### Available Options
+- **Site Identity**: Logo, title, colors
+- **Colors**: Primary, secondary, accent colors
+- **Contact Info**: Business contact details
+- **Social Media**: Social network links
+- **Theme Settings**: Additional theme options
 
-### Booking
-- Booking Email Address
-- Booking Phone Number
-- Terms & Conditions Page
+## Widget Areas
 
-## Widgets
+The theme includes the following widget areas:
+- **Primary Sidebar**: Main sidebar for pages
+- **Footer Area 1-4**: Four footer widget columns
+- **Footer Bottom**: Footer bottom widget area
 
-The theme includes custom widgets:
+## Hooks & Filters
 
-1. **Recent Tours Widget**
-   - Displays latest tours
-   - Customizable count
-   - Optional excerpt
+### Available Hooks
+```php
+// Before header
+do_action( 'fliptrips_before_header' );
 
-2. **Popular Destinations Widget**
-   - Shows featured destinations
-   - Region filtering
-   - Image display
+// After header
+do_action( 'fliptrips_after_header' );
 
-3. **Contact Info Widget**
-   - Display business contact details
-   - Opening hours
-   - Location map link
+// Before footer
+do_action( 'fliptrips_before_footer' );
 
-4. **Newsletter Widget**
-   - Email subscription form
-   - Integration-ready
-
-5. **Booking Form Widget**
-   - Inline booking form
-   - Date picker
-   - Validation
-
-## Custom Post Types
-
-### Tours
-- Tour name and description
-- Duration
-- Price
-- Location
-- Included amenities
-- Tour categories
-- Featured image
-
-### Destinations
-- Destination name and details
-- Region taxonomy
-- Best time to visit
-- Attractions
-- Hotels nearby
-- Featured image
-
-### Fleet
-- Vehicle name and specifications
-- Seating capacity
-- Fleet type (SUV, Sedan, etc.)
-- Amenities
-- Daily rate
-- Featured image
-
-### Testimonials
-- Client name and review
-- Rating (1-5 stars)
-- Image
-- Date
-
-### Team
-- Team member name and bio
-- Position
-- Photo
-- Contact details
-
-## Theme Structure
-
-```
-FlipTripsIndia/
-├── style.css                 # Theme header
-├── functions.php             # Main theme functions
-├── index.php                 # Fallback template
-├── front-page.php            # Homepage template
-├── page.php                  # Page template
-├── single.php                # Single post template
-├── archive.php               # Archive template
-├── header.php                # Header template
-├── footer.php                # Footer template
-├── sidebar.php               # Sidebar template
-├── search.php                # Search results template
-├── 404.php                   # 404 page template
-├── screenshot.png            # Theme screenshot
-├── assets/
-│   ├── css/
-│   │   ├── main.css          # Main stylesheet
-│   │   ├── responsive.css    # Responsive styles
-│   │   └── animations.css    # Animation styles
-│   ├── js/
-│   │   ├── main.js           # Main script
-│   │   ├── slider.js         # Hero slider
-│   │   └── booking.js        # Booking form
-│   ├── images/
-│   │   ├── logo.png          # Theme logo
-│   │   └── placeholder.png   # Placeholder images
-│   └── fonts/
-│       └── roboto/           # Font files
-├── inc/
-│   ├── customizer.php        # Theme customizer
-│   ├── enqueue.php           # Assets enqueueing
-│   ├── post-types.php        # Custom post types
-│   ├── ajax.php              # AJAX handlers
-│   ├── booking.php           # Booking logic
-│   ├── helpers.php           # Helper functions
-│   ├── widgets.php           # Custom widgets
-│   └── demo.php              # Demo content
-├── template-parts/
-│   ├── hero.php              # Hero section
-│   ├── destinations.php      # Destinations section
-│   ├── packages.php          # Packages section
-│   ├── fleet.php             # Fleet section
-│   ├── testimonials.php      # Testimonials section
-│   ├── blog.php              # Blog section
-│   ├── cta.php               # Call-to-action
-│   ├── contact.php           # Contact section
-│   └── whatsapp.php          # WhatsApp button
-├── templates/
-│   ├── template-booking.php  # Booking page
-│   ├── template-contact.php  # Contact page
-│   ├── template-about.php    # About page
-│   └── template-gallery.php  # Gallery page
-└── languages/
-    └── fliptrips-india.pot   # Translation file
+// After footer
+do_action( 'fliptrips_after_footer' );
 ```
 
-## File Descriptions
+### Available Filters
+```php
+// Filter primary color
+apply_filters( 'fliptrips_primary_color', '#FF6B6B' );
 
-### Core Files
+// Filter secondary color
+apply_filters( 'fliptrips_secondary_color', '#4ECDC4' );
+```
 
-**functions.php**
-- Main theme setup and configuration
-- Loads all include files
-- Theme support declarations
-- Action and filter hooks
+## Required Plugins
 
-**index.php**
-- Default fallback template
-- Displays posts with sidebar
-
-**front-page.php**
-- Homepage template
-- Contains hero slider, destinations, packages, fleet, testimonials
-
-**page.php**
-- Standard page template
-- Full width and sidebar layouts
-
-**single.php**
-- Single post/tour/destination template
-- Related posts section
-
-**header.php**
-- Site header with navigation
-- Logo and search
-
-**footer.php**
-- Site footer
-- Widget areas
-- Social links
-- Copyright
-
-### Include Files
-
-**inc/customizer.php**
-- Theme customizer registration
-- Settings sections and controls
-- Live preview support
-
-**inc/enqueue.php**
-- CSS and JavaScript enqueueing
-- Proper dependency management
-- Version control for assets
-
-**inc/post-types.php**
-- Custom post type registration
-- Taxonomies registration
-- Metabox setup
-
-**inc/ajax.php**
-- AJAX handlers
-- Booking form submission
-- Filter operations
-
-**inc/booking.php**
-- Booking system logic
-- Validation functions
-- Email notifications
-
-**inc/helpers.php**
-- Utility functions
-- Image helpers
-- Content formatting
-
-**inc/widgets.php**
-- Custom widget classes
-- Widget registration
-
-**inc/demo.php**
-- Demo content generation
-- Sample data creation
-
-### Template Parts
-
-Reusable template components included via `get_template_part()`
-
-## Security
-
-The theme follows WordPress security best practices:
-
-- **Input Sanitization**: All user inputs are sanitized
-- **Output Escaping**: All output is properly escaped
-- **Nonces**: CSRF protection via WordPress nonces
-- **SQL Prepared Statements**: Database queries use prepared statements
-- **Capability Checks**: Proper authorization checks
-- **Escaping Functions**:
-  - `esc_html()` - HTML context
-  - `esc_attr()` - Attribute context
-  - `esc_url()` - URL context
-  - `wp_kses_post()` - Post content
-  - `sanitize_text_field()` - Text input
-  - `sanitize_email()` - Email input
-
-## Performance
-
-- **Lazy Loading**: Images load on demand
-- **Minified Assets**: CSS and JS are minified
-- **Optimized Images**: Proper image sizing and formats
-- **Proper Enqueueing**: No inline CSS/JS
-- **Caching Headers**: Set properly for static assets
-
-## Accessibility
-
-- **WCAG 2.1 AA Compliant**
-- **Semantic HTML**: Proper heading hierarchy
-- **ARIA Labels**: Screen reader support
-- **Keyboard Navigation**: Full keyboard support
-- **Color Contrast**: Proper contrast ratios
-- **Mobile Accessible**: Touch-friendly interface
+For optimal functionality, consider installing:
+- [Elementor](https://wordpress.org/plugins/elementor/) - Page builder
+- [Yoast SEO](https://wordpress.org/plugins/wordpress-seo/) - SEO optimization
+- [Wordfence](https://wordpress.org/plugins/wordfence/) - Security
+- [WP Super Cache](https://wordpress.org/plugins/wp-super-cache/) - Caching
 
 ## Browser Support
 
@@ -361,20 +165,76 @@ The theme follows WordPress security best practices:
 - Edge (latest)
 - Mobile browsers (iOS Safari, Chrome Mobile)
 
-## Support
+## File Structure
 
-For issues, feature requests, or contributions, please visit:
-https://github.com/abhishekray7896-cloud/FlipTripsIndia
-
-## License
-
-GPL v2 or later
-See LICENSE file for details
+```
+fliptrips-india/
+├── template-parts/
+│   ├── hero.php
+│   ├── destinations.php
+│   ├── packages.php
+│   ├── fleet.php
+│   ├── testimonials.php
+│   ├── blog.php
+│   ├── cta.php
+│   └── whatsapp.php
+├── inc/
+│   ├── class-custom-post-types.php
+│   ├── class-customizer.php
+│   ├── helpers.php
+│   ├── helpers-output.php
+│   └── ajax-handlers.php
+├── assets/
+│   ├── css/
+│   │   ├── main.css
+│   │   ├── responsive.css
+│   │   ├── animations.css
+│   │   └── admin.css
+│   └── js/
+│       ├── main.js
+│       ├── slider.js
+│       ├── booking.js
+│       └── admin.js
+├── index.php
+├── style.css
+├── functions.php
+├── header.php
+├── footer.php
+└── README.md
+```
 
 ## Changelog
 
 ### Version 1.0.0
 - Initial release
-- Complete theme with all features
-- Demo content included
-- Full customizer support
+- Core theme features
+- Custom post types
+- Customizer settings
+- Responsive design
+- Animation effects
+- Social media integration
+
+## Credits
+
+- Built with [Bootstrap 5](https://getbootstrap.com/)
+- Icons by [Bootstrap Icons](https://icons.getbootstrap.com/)
+- Sliders by [Swiper.js](https://swiperjs.com/)
+
+## License
+
+GNU General Public License v2 or later
+This theme is free software. You can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
+
+## Support
+
+For support and inquiries, contact: abhishekray7896@gmail.com
+
+## Author
+
+**Abhishek Ray**
+- Email: abhishekray7896@gmail.com
+- GitHub: abhishekray7896-cloud
+
+---
+
+Thank you for using FlipTrips India! We hope this theme helps you create an amazing travel experience for your customers.
